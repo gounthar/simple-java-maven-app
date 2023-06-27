@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'git commit -m "Commit message"
-
+                sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
