@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '/opt/maven/bin/mvn -B -DskipTests clean package'git commit -m "Commit message"
+                sh 'mvn -B -DskipTests clean package'git commit -m "Commit message"
 
             }
         }
