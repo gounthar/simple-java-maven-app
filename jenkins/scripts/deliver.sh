@@ -8,13 +8,13 @@ set -x
 /opt/maven/bin/mvn jar:jar install:install help:evaluate -Dexpression=project.name
 set +x
 
-echo 'The following complex command extracts the value of the <name/> element'
+echo 'The following command extracts the value of the <name/> element'
 echo 'within <project/> of your Java/Maven project''s "pom.xml" file.'
 set -x
 NAME=`/opt/maven/bin/mvn help:evaluate -Dexpression=project.name | grep "^[^\[]"`
 set +x
 
-echo 'The following complex command behaves similarly to the previous one but'
+echo 'The following command behaves similarly to the previous one but'
 echo 'extracts the value of the <version/> element within <project/> instead.'
 set -x
 VERSION=`/opt/maven/bin/mvn help:evaluate -Dexpression=project.version | grep "^[^\[]"`
